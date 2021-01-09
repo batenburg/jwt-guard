@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Batenburg\JWTGuard\Test\Guards;
+namespace Batenburg\JWTGuard\Test\Unit\Guards;
 
 use Batenburg\JWTGuard\Exceptions\MethodNotImplementedException;
 use Batenburg\JWTGuard\Guards\JWTGuard;
