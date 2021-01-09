@@ -50,6 +50,6 @@ jobs:
         - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{.disabled,}
         - if [[ ! $(php -m | grep -si xdebug) ]]; then echo "xdebug required for coverage"; exit 1; fi
       script:
-        - ./vendor/bin/phpunit -v --coverage-clover=coverage.xml"
+        - ./vendor/bin/phpunit -v --coverage-clover ./coverage.xml"
       after_script:
         - php ./vendor/bin/php-coveralls -v
