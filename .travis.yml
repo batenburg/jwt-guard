@@ -51,7 +51,7 @@ jobs:
         - if [[ ! $(php -m | grep -si xdebug) ]]; then echo "xdebug required for coverage"; exit 1; fi
       script:
         - mkdir -p build/logs
-        - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+        - phpunit --coverage-clover build/logs/clover.xml
         - cd build/logs && ls -la
       after_script:
         - php vendor/bin/php-coveralls -v
