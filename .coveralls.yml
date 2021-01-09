@@ -1,2 +1,2 @@
 service_name: travis-ci
-coverage_clover: /home/travis/build/batenburg/jwt-guard/build/logs/clover.xml
+coverage_clover: coverage.xml
