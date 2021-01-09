@@ -25,6 +25,11 @@ script:
 
 jobs:
   include:
+    # Test against latest Laravel 8.0 stable
+    - php: 7.4
+      install:
+        - composer require laravel/framework:8.0.*
+
     # Test dev versions
     - php: 7.4
       if: type = cron
