@@ -24,12 +24,15 @@ class KeyCacheFetcher implements KeyFetcher
         $this->cacheRepository = $cacheRepository;
     }
 
+    /**
+     * @return string[]
+     */
     public function getKeys(): array
     {
         return $this->cacheRepository->remember(
             "{$this->issuer}.keys",
             self::EXPIRES_AFTER_IN_SECONDS,
-            fn () => $this->keyFetcher->getKeys()
+            fn (): array => $this->keyFetcher->getKeys()
         );
     }
 }

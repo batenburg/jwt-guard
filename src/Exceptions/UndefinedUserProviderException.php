@@ -7,9 +7,9 @@ namespace Batenburg\JWTGuard\Exceptions;
 use Exception;
 use Throwable;
 
-class UndefinedConfigParameterException extends Exception
+class UndefinedUserProviderException extends Exception
 {
-    public function __construct(string $message = 'Parameter not defined in config', int $code = 0, Throwable $previous = null)
+    public function __construct(string $message = 'Undefined user provider.', int $code = 0, Throwable $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }

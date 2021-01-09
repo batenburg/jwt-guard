@@ -31,7 +31,7 @@ class TokenServiceProvider extends ServiceProvider
 
         $this->app->bind(
             TokenExtractorInterface::class,
-            fn (Application $application) => $application->make(TokenExtractorCombiner::class)
+            fn (Application $application): TokenExtractorCombiner => $application->make(TokenExtractorCombiner::class)
         );
     }
 }

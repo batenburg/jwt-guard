@@ -12,7 +12,6 @@ use Illuminate\Auth\AuthenticationException;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\UserProvider;
-use Illuminate\Foundation\Auth\User;
 
 class JWTGuard implements Guard
 {
@@ -22,7 +21,7 @@ class JWTGuard implements Guard
 
     private string $token;
 
-    private ?User $user = null;
+    private ?Authenticatable $user = null;
 
     public function __construct(UserProvider $userProvider, JWTVerifier $JWTVerifier, string $token)
     {
@@ -81,10 +80,10 @@ class JWTGuard implements Guard
 
     /**
      * @param array $credentials
-     * @return bool|void
+     * @return bool
      * @throws MethodNotImplementedException
      */
-    public function validate(array $credentials = []): void
+    public function validate(array $credentials = []): bool
     {
         throw new MethodNotImplementedException;
     }

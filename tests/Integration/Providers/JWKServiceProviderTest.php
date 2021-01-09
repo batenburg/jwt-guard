@@ -9,7 +9,9 @@ use Batenburg\JWTVerifier\JWKFetchers\Adaptors\Contracts\Adaptor as KeyFetcherAd
 use Batenburg\JWTVerifier\JWKFetchers\Contracts\KeyFetcher as KeyFetchInterface;
 use Illuminate\Cache\CacheManager;
 use Illuminate\Config\Repository as ConfigRepository;
+use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Foundation\Application;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -61,12 +63,15 @@ class JWKServiceProviderTest extends TestCase
         );
         $this->application->singleton(
             'cache.store',
-            function (Application $app) {
+            function (Application $app): CacheRepository {
                 return $app['cache']->driver();
             }
         );
 
-        $this->application->singleton(KeyFetcherAdaptor::class, fn () => $this->createMock(KeyFetcherAdaptor::class));
+        $this->application->singleton(
+            KeyFetcherAdaptor::class,
+            fn (): MockObject => $this->createMock(KeyFetcherAdaptor::class)
+        );
 
         $this->jwkServiceProvider = new JWKServiceProvider($this->application);
     }

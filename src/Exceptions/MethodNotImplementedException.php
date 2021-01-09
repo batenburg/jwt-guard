@@ -9,7 +9,7 @@ use Throwable;
 
 class MethodNotImplementedException extends Exception
 {
-    public function __construct($message = 'Method not implemented.', $code = 0, Throwable $previous = null)
+    public function __construct(string $message = 'Method not implemented.', int $code = 0, Throwable $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }

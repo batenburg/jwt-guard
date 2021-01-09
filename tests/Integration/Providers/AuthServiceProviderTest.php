@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Batenburg\JWTGuard\Test\Integration\Providers;
 
+use Batenburg\JWTGuard\Exceptions\UndefinedUserProviderException;
 use Batenburg\JWTGuard\Guards\JWTGuard;
 use Batenburg\JWTGuard\Providers\AuthServiceProvider;
 use Batenburg\JWTVerifier\Extractors\Contracts\TokenExtractor;
@@ -70,5 +71,19 @@ class AuthServiceProviderTest extends TestCase
         $guard = $authManager->guard('api');
 
         $this->assertInstanceOf(JWTGuard::class, $guard);
+    }
+
+    /**
+     * @covers \Batenburg\JWTGuard\Providers\AuthServiceProvider::boot
+     */
+    public function testBootWithNonExistingUserProvider(): void
+    {
+        $this->expectException(UndefinedUserProviderException::class);
+
+        $authManager = new AuthManager($this->application);
+
+        $this->authServiceProvider->boot($authManager);
+
+        $authManager->guard('api');
     }
 }

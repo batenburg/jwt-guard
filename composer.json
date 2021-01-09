@@ -15,9 +15,10 @@
     "batenburg/jwt-verifier": "1.0.*"
   },
   "require-dev": {
+    "php-coveralls/php-coveralls": "^2.4",
     "phpunit/phpunit": "^9.0",
     "squizlabs/php_codesniffer": "^3.5",
-    "php-coveralls/php-coveralls": "^2.4"
+    "vimeo/psalm": "^4.3"
   },
   "autoload": {
     "psr-4": {
