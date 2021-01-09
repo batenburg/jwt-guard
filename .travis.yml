@@ -52,4 +52,5 @@ jobs:
       script:
         - ./vendor/bin/phpunit -v --coverage-clover ./build/logs/clover.xml
       after_script:
+        - ls -la
         - php ./vendor/bin/php-coveralls -v
