@@ -1,0 +1,70 @@
+language: php
+sudo: false
+dist: xenial
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - 7.4
+
+env:
+  global:
+    - COMPOSER_MEMORY_LIMIT=-1
+
+before_install:
+  - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
+  - composer self-update
+
+install:
+  - composer update
+
+script:
+  - ./vendor/bin/phpunit -v
+
+jobs:
+  include:
+    # Test against latest Symfony 4.3 stable
+    - php: 7.4
+      install:
+        - composer require symfony/twig-bundle:4.3.* symfony/dependency-injection:4.3.* symfony/framework-bundle:4.3.*
+
+    # Test against latest Symfony 4.4 stable
+    - php: 7.4
+      install:
+        - composer require symfony/twig-bundle:4.4.* symfony/dependency-injection:4.4.* symfony/framework-bundle:4.4.*
+
+    # Test against latest Symfony 5.0 stable
+    - php: 7.4
+      install:
+        - composer require symfony/twig-bundle:5.0.* symfony/dependency-injection:5.0.* symfony/framework-bundle:5.0.*
+
+    # Test against latest Symfony 5.0 stable
+    - php: 7.4
+      install:
+        - composer require symfony/twig-bundle:5.1.* symfony/dependency-injection:5.1.* symfony/framework-bundle:5.1.*
+
+    # Test dev versions
+    - php: 7.4
+      if: type = cron
+      install:
+        - composer update
+
+    - stage: Code Quality
+      php: 7.4
+      script:
+        - ./vendor/bin/phpcs
+        - ./vendor/bin/psalm
+
+    - stage: Coverage
+      php: 7.4
+      install:
+        - composer update
+      before_script:
+        - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{.disabled,}
+        - if [[ ! $(php -m | grep -si xdebug) ]]; then echo "xdebug required for coverage"; exit 1; fi
+      script:
+        - ./vendor/bin/phpunit -v --coverage-clover ./build/logs/clover.xml
+      after_script:
+        - php ./vendor/bin/php-coveralls -v
