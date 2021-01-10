@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1610261749">
+  <project timestamp="1610261749">
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Exceptions/MethodNotImplementedException.php">
+      <class name="Batenburg\JWTGuard\Exceptions\MethodNotImplementedException" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="14" type="stmt" count="4"/>
+      <line num="15" type="stmt" count="4"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Exceptions/UndefinedUserProviderException.php">
+      <class name="Batenburg\JWTGuard\Exceptions\UndefinedUserProviderException" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="14" type="stmt" count="4"/>
+      <line num="15" type="stmt" count="4"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Guards/JWTGuard.php">
+      <class name="Batenburg\JWTGuard\Guards\JWTGuard" namespace="global">
+        <metrics complexity="11" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="28" coveredelements="28"/>
+      </class>
+      <line num="26" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+      <line num="28" type="stmt" count="12"/>
+      <line num="29" type="stmt" count="12"/>
+      <line num="30" type="stmt" count="12"/>
+      <line num="31" type="stmt" count="12"/>
+      <line num="37" type="method" name="check" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="39" type="stmt" count="2"/>
+      <line num="46" type="method" name="guest" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="48" type="stmt" count="2"/>
+      <line num="55" type="method" name="user" visibility="public" complexity="2" crap="2" count="3"/>
+      <line num="57" type="stmt" count="3"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="61" type="stmt" count="3"/>
+      <line num="63" type="stmt" count="3"/>
+      <line num="70" type="method" name="id" visibility="public" complexity="2" crap="2" count="10"/>
+      <line num="72" type="stmt" count="10"/>
+      <line num="74" type="stmt" count="7"/>
+      <line num="75" type="stmt" count="2"/>
+      <line num="78" type="stmt" count="5"/>
+      <line num="86" type="method" name="validate" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="88" type="stmt" count="1"/>
+      <line num="95" type="method" name="setUser" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="97" type="stmt" count="1"/>
+      <line num="104" type="method" name="verifyTokenAndHydrateJwt" visibility="private" complexity="2" crap="2" count="10"/>
+      <line num="107" type="stmt" count="10"/>
+      <line num="108" type="stmt" count="3"/>
+      <line num="109" type="stmt" count="3"/>
+      <line num="112" type="stmt" count="7"/>
+      <metrics loc="114" ncloc="85" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="28" coveredelements="28"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/JWKFetchers/KeyCacheFetcher.php">
+      <class name="Batenburg\JWTGuard\JWKFetchers\KeyCacheFetcher" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </class>
+      <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="30" type="method" name="getKeys" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <metrics loc="38" ncloc="35" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Providers/AuthServiceProvider.php">
+      <class name="Batenburg\JWTGuard\Providers\AuthServiceProvider" namespace="global">
+        <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
+      </class>
+      <line num="18" type="method" name="boot" visibility="public" complexity="3" crap="3" count="2"/>
+      <line num="20" type="stmt" count="2"/>
+      <line num="21" type="stmt" count="2"/>
+      <line num="22" type="stmt" count="2"/>
+      <line num="24" type="stmt" count="2"/>
+      <line num="26" type="stmt" count="2"/>
+      <line num="29" type="stmt" count="2"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="43" type="stmt" count="2"/>
+      <line num="45" type="stmt" count="2"/>
+      <metrics loc="46" ncloc="44" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Providers/JWKServiceProvider.php">
+      <class name="Batenburg\JWTGuard\Providers\JWKServiceProvider" namespace="global">
+        <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
+      </class>
+      <line num="20" type="method" name="register" visibility="public" complexity="2" crap="2" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="47" type="stmt" count="1"/>
+      <metrics loc="48" ncloc="45" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Providers/JWTServiceProvider.php">
+      <class name="Batenburg\JWTGuard\Providers\JWTServiceProvider" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="12" coveredelements="12"/>
+      </class>
+      <line num="16" type="method" name="register" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="18" type="stmt" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <metrics loc="36" ncloc="33" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="12" coveredelements="12"/>
+    </file>
+    <file name="/Users/patrickbatenburg/Sites/jwt-guard/src/Providers/TokenServiceProvider.php">
+      <class name="Batenburg\JWTGuard\Providers\TokenServiceProvider" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="14" coveredelements="14"/>
+      </class>
+      <line num="18" type="method" name="register" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <metrics loc="37" ncloc="37" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="14" coveredelements="14"/>
+    </file>
+    <metrics files="8" loc="351" ncloc="311" classes="8" methods="16" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="87" coveredstatements="87" elements="103" coveredelements="103"/>
+  </project>
+</coverage>
