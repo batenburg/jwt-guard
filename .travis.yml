@@ -52,4 +52,4 @@ jobs:
       script:
         - php ./vendor/bin/phpunit --coverage-text --coverage-clover ./clover.xml
       after_script:
-        - php ./vendor/bin/php-coveralls -v
+        - php coverage-checker.php clover.xml 100
